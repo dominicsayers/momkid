@@ -1,0 +1,22 @@
+<%= form_with(model: mom) do |form| %>
+  <% if mom.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(mom.errors.count, "error") %> prohibited this mom from being saved:</h2>
+
+      <ul>
+        <% mom.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
