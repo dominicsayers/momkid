@@ -3,6 +3,12 @@
 <%= render @mom %>
 
 <div>
+  <h2>Kids</h2>
+  <%= render @mom.kids %>
+
+  <h3>Add kid</h3>
+  <%= render 'kids/form' %>
+
   <%= link_to "Edit this mom", edit_mom_path(@mom) %> |
   <%= link_to "Back to moms", moms_path %>
 
