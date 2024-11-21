@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class KidsController < ApplicationController
   def create
     @mom = Mom.find(params[:mom_id])
