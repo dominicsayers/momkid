@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_708_134_427) do
-  create_table 'kids', force: :cascade do |t|
-    t.string 'name'
-    t.integer 'mom_id', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.index ['mom_id'], name: 'index_kids_on_mom_id'
+ActiveRecord::Schema[8.0].define(version: 2022_07_08_134427) do
+  create_table "kids", force: :cascade do |t|
+    t.string "name"
+    t.integer "mom_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["mom_id"], name: "index_kids_on_mom_id"
   end
 
-  create_table 'moms', force: :cascade do |t|
-    t.string 'name'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "moms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key 'kids', 'moms'
+  add_foreign_key "kids", "moms"
 end
