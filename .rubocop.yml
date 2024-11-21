@@ -4,3 +4,11 @@ require:
 
 AllCops:
   NewCops: enable
+
+# The following cops can be enabled when time permits to manually fix the
+# violations
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
